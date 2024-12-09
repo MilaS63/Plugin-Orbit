@@ -1,0 +1,170 @@
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes cycleAnimation {
+  0%, 25% {
+    opacity: 1;
+  }
+  30%, 100% {
+    opacity: 0;
+  }
+}
+
+@keyframes fadeInOut {
+  0%, 100% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  background-color: white;
+}
+
+.animation-container {
+  position: relative;
+  width: 100%;
+  height: 300px;
+  overflow: hidden;
+}
+
+.image-container {
+  position: absolute;
+  width: 10%;
+  height: auto;
+  opacity: 0;
+}
+
+.image {
+  width: 100%;
+}
+
+.final-image {
+  position: absolute;
+  width: 12%;
+  height: auto;
+  top: 28%;
+  left: 45%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  animation: zoomOut 20s ease-in-out infinite;
+}
+
+.image1 {
+  animation: cycleAnimation 20s infinite;
+  top: 10%;
+  left: 5%;
+  animation-delay: 2s;
+}
+
+.image2 {
+  animation: cycleAnimation 20s infinite;
+  top: 20%;
+  left: 20%;
+  animation-delay: 10s;
+}
+
+.image3 {
+  animation: cycleAnimation 20s infinite;
+  top: 10%;
+  left: 65%;
+  animation-delay: 6s;
+}
+
+.image4 {
+  animation: cycleAnimation 20s infinite;
+  top:60%;
+  left: 5%;
+  animation-delay:8s;
+}
+
+.image5 {
+  animation: cycleAnimation 20s infinite;
+  top: 60%;
+  left: 65%;
+  animation-delay: 4s;
+}
+
+.image6 {
+  animation: cycleAnimation 20s infinite;
+  top: 20%;
+  left: 80%;
+  animation-delay: 12s;
+}
+.image7 {
+   animation: cycleAnimation 20s infinite;
+    top: 40%;
+  left: 80%;
+  animation-delay: 3s;
+}
+.image8 {
+  animation: cycleAnimation 20s infinite;
+  top: 60%;
+  left: 25%;
+  animation-delay: 5s;  
+}
+
+@keyframes zoomOut {
+  0% {
+    transform: scale(1);
+    opacity: 0;
+  }
+  50% {
+    transform: scale(1.5);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 0;
+  }
+}
+
+/* Media Queries for Mobile */
+@media (max-width: 768px) {
+  .animation-container {
+    height: 200px;
+  }
+
+  .image-container {
+    width: 8%;
+  }
+
+  .final-image {
+    width: 12%;
+  }
+}
+
+@media (max-width: 480px) {
+  .animation-container {
+    height: 160px;
+  }
+
+  .image-container {
+    width: 16%;
+  }
+
+  .final-image {
+    width: 18%;
+  }
+}
